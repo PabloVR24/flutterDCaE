@@ -62,7 +62,7 @@ class _ButtonsView extends StatelessWidget {
                 onPressed: () {},
                 icon: const Icon(Icons.account_box_outlined),
                 label: const Text('Text Icon')),
-            CustomButton(),
+            const CustomButton(),
             IconButton(
                 onPressed: () {},
                 icon: const Icon(Icons.app_registration_rounded)),
@@ -92,8 +92,8 @@ class CustomButton extends StatelessWidget {
         color: colors.primary,
         child: InkWell(
           onTap: (){},
-          child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+          child: const Padding(
+            padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
             child: Text('Hola Mundo', style: TextStyle(color: Colors.white),),
           ),
         ),
