@@ -73,8 +73,8 @@ class _AppTutorialScreenState extends State<AppTutorialScreen> {
                 .toList(),
           ),
           Positioned(
-              right: 10,
-              top: 50,
+              left: 10,
+              bottom: 30,
               child: TextButton(
                 child: const Text('Saltar'),
                 onPressed: () => context.pop(),
