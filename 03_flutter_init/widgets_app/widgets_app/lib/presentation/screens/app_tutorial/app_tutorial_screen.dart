@@ -6,15 +6,15 @@ final slides = <SlideInfo>[
   SlideInfo(
       'Busca la comida',
       'Cillum incididunt elit aute sint pariatur elit nulla ex officia nulla in sunt enim laborum.',
-      'assets/Images/1.png'),
+      'assets/1.png'),
   SlideInfo(
       'Entrega la comida',
       'Officia ipsum veniam amet ea magna aute laboris exercitation ex laboris proident.',
-      'assets/Images/2.png'),
+      'assets/2.png'),
   SlideInfo(
       'Disfruta la comida',
       'Aliquip quis fugiat excepteur nisi cupidatat proident nostrud elit.',
-      'assets/Images/3.png'),
+      'assets/3.png'),
 ];
 
 class SlideInfo {
