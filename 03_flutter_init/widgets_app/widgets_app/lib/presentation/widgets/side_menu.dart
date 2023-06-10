@@ -15,8 +15,7 @@ class _SideMenuState extends State<SideMenu> {
   int navDrawerIndex = 0;
   @override
   Widget build(BuildContext context) {
-    final hastNotch = MediaQuery.of(context).viewPadding.top;
-
+    
     return NavigationDrawer(
         selectedIndex: navDrawerIndex,
         onDestinationSelected: (value) {
