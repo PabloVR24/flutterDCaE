@@ -2,9 +2,8 @@ import 'package:cinemapedia_app/domain/datasources/movies_datasource.dart';
 import 'package:cinemapedia_app/domain/entities/movie.dart';
 import 'package:cinemapedia_app/domain/repositories/movies_repository.dart';
 
-class MovieRepositoryImpl extends MovieRepository{
-
-final MovieDatasource datasource;
+class MovieRepositoryImpl extends MovieRepository {
+  final MovieDatasource datasource;
 
   MovieRepositoryImpl(this.datasource);
 
@@ -13,4 +12,18 @@ final MovieDatasource datasource;
     return datasource.getNowPlaying(page: page);
   }
 
+  @override
+  Future<List<Movie>> getPopular({int page = 1}) {
+    return datasource.getPopular(page: page);
+  }
+  
+  @override
+  Future<List<Movie>> getTopRated({int page = 1}) {
+    return datasource.getTopRated(page: page);
+  }
+  
+  @override
+  Future<List<Movie>> getUpcoming({int page = 1}) {
+    return datasource.getUpcoming(page: page);
+  }
 }
