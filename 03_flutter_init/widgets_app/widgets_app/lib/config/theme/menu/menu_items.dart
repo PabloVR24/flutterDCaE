@@ -15,6 +15,11 @@ class MenuItem {
 
 const appMenuItems = <MenuItem>[
   MenuItem(
+      title: 'Riverpod Counter',
+      subTitle: 'Scaffold de Riverpod',
+      link: '/counter',
+      icon: Icons.numbers_rounded),
+  MenuItem(
       title: 'Botones',
       subTitle: 'Varios Botones en Flutter',
       link: '/buttons',
@@ -23,5 +28,40 @@ const appMenuItems = <MenuItem>[
       title: 'Tarjetas',
       subTitle: 'Un contenedor estilizado',
       link: '/cards',
-      icon: Icons.credit_card)
+      icon: Icons.credit_card),
+  MenuItem(
+      title: 'ProgressIndicators',
+      subTitle: 'Generales y Controlados',
+      link: '/progress',
+      icon: Icons.refresh_rounded),
+  MenuItem(
+      title: 'Snackbars y Dialogos',
+      subTitle: 'Indicadores en pantalla',
+      link: '/snackbars',
+      icon: Icons.info_outline),
+  MenuItem(
+      title: 'Animated Container',
+      subTitle: 'StateFull Widget Animado',
+      link: '/animated',
+      icon: Icons.check_box_outline_blank_outlined),
+  MenuItem(
+      title: 'UI Controls + Tiles',
+      subTitle: 'Controles de Flutter',
+      link: '/ui-controls',
+      icon: Icons.car_rental_outlined),
+  MenuItem(
+      title: 'Introduccion a aplicacion',
+      subTitle: 'Tutorial de introduccion',
+      link: '/tutorial',
+      icon: Icons.accessible_rounded),
+  MenuItem(
+      title: 'Infinite Scroll',
+      subTitle: 'Lista Infinita',
+      link: '/infinite',
+      icon: Icons.list_alt_rounded),
+  MenuItem(
+      title: 'Theme Changer',
+      subTitle: 'Cofniguracion de Tema',
+      link: '/theme-changer',
+      icon: Icons.color_lens_outlined),
 ];
