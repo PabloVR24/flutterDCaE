@@ -1,7 +1,7 @@
-import 'package:cinemapedia_app/presentation/screens/providers/actors/actors_repository_provider.dart';
+import 'package:cinemapedia_app/presentation/providers/actors/actors_repository_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../../../../domain/entities/actor.dart';
+import '../../../domain/entities/actor.dart';
 
 final actorByMovieProvider =
     StateNotifierProvider<ActorsByMovieNotifier, Map<String, List<Actor>>>(
