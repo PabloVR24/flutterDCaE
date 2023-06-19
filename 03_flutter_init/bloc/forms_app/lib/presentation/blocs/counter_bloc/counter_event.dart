@@ -6,6 +6,11 @@ abstract class CounterEvent {
 
 class CounterIncreased extends CounterEvent {
   final int value;
-
   const CounterIncreased(this.value);
+}
+
+class CounterReset extends CounterEvent {
+  final int value;
+
+  CounterReset({this.value = 0});
 }
