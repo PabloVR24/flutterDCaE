@@ -37,7 +37,6 @@ class _MovieHorizontalListViewState extends State<MovieHorizontalListView> {
       }
     });
     super.initState();
-    //TODO:
   }
 
   @override
