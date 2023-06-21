@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "819575241484",
+    "project_id": "flutter-projects-e3408",
+    "storage_bucket": "flutter-projects-e3408.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:819575241484:android:c573c0b932778ce33ae729",
+        "android_client_info": {
+          "package_name": "com.pablovalera.push_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "819575241484-4h3rm26e3s54inab6ip47evpfgq3c7ue.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAueYq92pY_ptZATmrX-AcAreLoN0Voxio"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "819575241484-4h3rm26e3s54inab6ip47evpfgq3c7ue.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
