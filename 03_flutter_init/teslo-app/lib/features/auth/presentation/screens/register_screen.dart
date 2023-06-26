@@ -43,7 +43,6 @@ class RegisterScreen extends StatelessWidget {
             ),
 
             const SizedBox(height: 50),
-
             Container(
               height: size.height - 260, // 80 los dos sizebox y 100 el ícono
               width: double.infinity,
@@ -105,10 +104,12 @@ class _RegisterForm extends ConsumerWidget {
           CustomTextFormField(
             label: 'Repita la contraseña',
             obscureText: true,
-            onChanged: ref.read(registerFormProvider.notifier).onPasswordRepeatChange,
+            onChanged:
+                ref.read(registerFormProvider.notifier).onPasswordRepeatChange,
             errorMessage: registerForm.isFormPosted
                 ? registerForm.passwordRepeat.errorMessage
                 : null,
+            
           ),
           const SizedBox(height: 30),
           SizedBox(

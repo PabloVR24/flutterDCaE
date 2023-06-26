@@ -96,7 +96,6 @@ class RegisterFormNotifier extends StateNotifier<RegisterFormState> {
   onFormSubmit() {
     _touchEveryField();
     if (!state.isValid) return;
-    print(state);
   }
 
   _touchEveryField() {
