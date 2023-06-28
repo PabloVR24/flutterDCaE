@@ -3,7 +3,8 @@ import 'package:teslo_shop/features/products/domain/entities/product.dart';
 import 'package:teslo_shop/features/products/domain/repositories/products_repository.dart';
 import 'package:teslo_shop/features/products/presentation/providers/products_repository_provider.dart';
 
-final productsProvider = StateNotifierProvider<ProductsNotifier, ProductsState>((ref) {
+final productsProvider =
+    StateNotifierProvider<ProductsNotifier, ProductsState>((ref) {
   final productsRepository = ref.watch(productsRepositoryProvider);
   return ProductsNotifier(productsRepository: productsRepository);
 });
@@ -16,11 +17,33 @@ class ProductsNotifier extends StateNotifier<ProductsState> {
     loadNextPage();
   }
 
+  Future<bool> createOrUpdateProduct(Map<String, dynamic> productLike) async {
+    try {
+      final product = await productsRepository.createUpdatePruduct(productLike);
+      final isProductInList =
+          state.products.any((element) => element.id == product.id);
+
+      if (!isProductInList) {
+        state = state.copyWith(products: [...state.products, product]);
+      }
+
+      state = state.copyWith(
+          products: state.products
+              .map((element) => (element.id == product.id) ? product : element)
+              .toList());
+
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
   Future loadNextPage() async {
     if (state.isLoading || state.isLastPage) return;
     state = state.copyWith(isLoading: true);
 
-    final products = await productsRepository.getProductsByPage(limit: state.limit, offset: state.offset);
+    final products = await productsRepository.getProductsByPage(
+        limit: state.limit, offset: state.offset);
     if (products.isEmpty) {
       state = state.copyWith(isLoading: false, isLastPage: true);
       return;

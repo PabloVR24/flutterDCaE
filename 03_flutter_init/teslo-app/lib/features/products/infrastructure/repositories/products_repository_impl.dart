@@ -9,12 +9,12 @@ class ProductRepositoryImpl extends ProductsRepository {
 
   @override
   Future<Product> createUpdatePruduct(Map<String, dynamic> productLike) {
-    return createUpdatePruduct(productLike);
+    return dataSource.createUpdatePruduct(productLike);
   }
 
   @override
   Future<Product> getProductByID(String id) {
-    return getProductByID(id);
+    return dataSource.getProductByID(id);
   }
 
   @override
@@ -24,6 +24,6 @@ class ProductRepositoryImpl extends ProductsRepository {
 
   @override
   Future<List<Product>> searchProductByTerm(String term) {
-    return searchProductByTerm(term);
+    return dataSource.searchProductByTerm(term);
   }
 }
